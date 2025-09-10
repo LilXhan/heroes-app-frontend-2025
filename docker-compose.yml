@@ -1,0 +1,13 @@
+services:
+  heroes-app:
+    container_name: heroes-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: ${STAGE}
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+    environment:
+      VITE_API_URL: ${VITE_API_URL}
+    ports:
+      - 80:80

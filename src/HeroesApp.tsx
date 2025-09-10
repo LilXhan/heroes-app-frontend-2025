@@ -6,7 +6,7 @@ import { FavoriteHeroProvider } from './heroes/context/FavoriteHeroContext';
 
 export const HeroesApp = () => {
   const queryClient = new QueryClient();
-
+  console.log(import.meta.env.VITE_API_URL);
   return (
     <QueryClientProvider client={queryClient}>
       <FavoriteHeroProvider>
